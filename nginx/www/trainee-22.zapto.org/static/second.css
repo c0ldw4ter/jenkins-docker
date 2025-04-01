@@ -1,0 +1,9 @@
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

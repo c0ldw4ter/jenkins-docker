@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainee22-nginx!</title>
+    <style>
+        body {
+            background: red;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+		h1 {
+            color: blue;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .image-container {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+        }
+
+        .center {
+			width:600px;
+			height:510px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('../static/img/1438250978_1558664614.png');
+			background-size: 100% 100%;
+
+        }
+
+        .top-center {
+            top: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('../static/img/megadeth-peace-sells-social.jpg');
+        }
+
+        .top-right {
+            top: 1px;
+            right: 1px;
+            background-image: url('../static/img/istockphoto-1308364732-170667a.jpg');
+        }
+
+        .bottom-right {
+			width : 20%;
+			height:30%;
+            bottom: 1px;
+            right: 1px;
+            background-image: url('../static/img/zastavki-gas-kvas-com-9toj-p-zastavki-na-telefon-chelovek-benzopila-7.jpg');
+			background-size: 100% 100%;
+        }
+
+        .bottom-left {
+			width:300px;
+			height:300px;
+            bottom: 1px;
+            left: 1px;
+            background-image: url('../static/img/Kill_Em_All.jpg');
+        }
+
+
+		.left-center {
+            top: 50%;
+            left: -140px;
+            transform: rotate(45deg) translateY(-50%);
+            background-image: url('../static/img/Flag.png');
+
+
+        }
+
+
+		.bottom-center {
+            bottom: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('../static/img/5a7312b379d8316151810d2b.png');
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My RED server!</h1>
+
+    <div class="image-container center"></div>
+    <div class="image-container top-center"></div>
+    <div class="image-container top-right"></div>
+    <div class="image-container bottom-right"></div>
+    <div class="image-container bottom-left"></div>
+	<div class="image-container left-center"></div>
+	<div class="image-container bottom-center"></div>
+</body>
+</html>
