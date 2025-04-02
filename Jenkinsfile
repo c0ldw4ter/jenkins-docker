@@ -58,7 +58,7 @@ pipeline {
             steps {
                 sh '''
                   echo "DEPLOY"
-                  ansible-playbook /etc/ansible/deploy.yaml --extra-vars TAG=${BUILD_ID}
+                  ansible-playbook /etc/ansible/pipe-dep.yaml --extra-vars TAG=${BUILD_ID}
                 '''
             }
         }
