@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-
                 git url: 'https://github.com/c0ldw4ter/jenkins-docker.git', branch: 'main'
             }
         }
@@ -15,7 +14,6 @@ pipeline {
                 sh '''
                   echo "Stopping old container if exists..."
                   docker stop test_jenkins_nginx || true
-                  sleep 5
 
                   echo "BUILDING DOCKER"
                   docker build -t trainee-jenkins .
@@ -49,6 +47,9 @@ pipeline {
 
                       docker tag trainee-jenkins:latest c0ldw4ter/jenkis-docker:${BUILD_ID}
                       docker push c0ldw4ter/jenkis-docker:${BUILD_ID}
+
+                      echo "DEL OLD IMAGES"
+                      docker images | xargs -r docker rmi --force || true 
                     '''
                 
             }
